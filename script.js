@@ -12,7 +12,7 @@ $(document).keydown(function(e) {
 	
 	if(keys[e.keyCode]) {
 		if(program == 1) {
-			var url = prompt("Bitte URL (OGG / MP3; nicht file:///) eingeben.");
+			var url = prompt("Bitte URL (OGG / MP3; nicht file:///) eingeben.", $("#player" + keys[e.keyCode]).get(0).src);
 			if(url != null & url.length > 0) {
 				localStorage.setItem(keys[e.keyCode], url);
 				$("#player" + this.id.substr(1)).parent().addClass("filled");
@@ -90,7 +90,7 @@ $(document).ready(function() {
 	
 	$(".player").bind("click", function() {
 		if(program == 1) {
-			var url = prompt("Bitte URL (OGG / MP3; nicht file:///) eingeben.");
+			var url = prompt("Bitte URL (OGG / MP3; nicht file:///) eingeben.", $("#player" + this.id.substr(1)).get(0).src);
 			if(url != null & url.length > 0) {
 				localStorage.setItem(this.id.substr(1), url);
 				$("#player" + this.id.substr(1)).parent().addClass("filled");
