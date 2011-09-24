@@ -8,7 +8,7 @@ Todo
 
 License
 -------
-soundboard - basic soundboard written in html5 (currently only Chrome and Safari are supported)
+    soundboard - basic soundboard written in HTML5 and JavaScript
     Copyright (C) 2011 oleander@oleander.cc
 
     This program is free software: you can redistribute it and/or modify
