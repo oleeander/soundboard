@@ -71,6 +71,7 @@ $(document).ready(function() {
 	
 	$("audio").bind("ended", function() {
 		$(this).parent().find(".status").removeClass("playing");
+		$(this).get(0).pause();
 	});
 	$("audio").bind("timeupdate", function() {
 		pos = (this.currentTime / this.duration) * 100,
